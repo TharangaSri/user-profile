@@ -1,3 +1,4 @@
+import Button from "@restart/ui/esm/Button";
 import { useContext } from "react";
 import { UserContext } from "../contexts/UserContext";
 import User from "./User";
@@ -8,12 +9,16 @@ function UserList() {
     <>
       <div className="table-title">
         <div className="row">
-          <div className="col-sm-6">
+          <div className="col-sm-7 col-lg-9">
             <h2>
               <b>Fusiongrove</b> <i>Profile Manager</i>
             </h2>
           </div>
-          <div className="col-sm-6"></div>
+          <div className="col-sm-5 col-lg-3">
+            <Button className="btn btn-warning">
+              <b>Create New User Profile</b>
+            </Button>
+          </div>
         </div>
       </div>
       <table className="table table-striped table-hover">

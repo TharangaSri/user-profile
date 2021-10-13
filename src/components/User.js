@@ -11,10 +11,18 @@ function User({ user }) {
         <img src={user.image} width="75px" height="75" />
       </td>
       <td>
-        <button>Edit</button>
+        <button className="btn text-warning btn-act">
+          <i className="material-icons" data-toggle="tooltip" title="Edit">
+            &#xE254;
+          </i>
+        </button>
       </td>
       <td>
-        <button>Delete</button>
+        <button className="btn text-danger btn-act">
+          <i className="material-icons" data-toggle="tooltip" title="Delete">
+            &#xE872;
+          </i>
+        </button>
       </td>
     </>
   );
