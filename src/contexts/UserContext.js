@@ -1,32 +1,25 @@
-import { createContext, useState } from "react";
+import { createContext, useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
 
 export const UserContext = createContext();
 
 const UserContextProvider = (props) => {
-  const [users, setUsers] = useState([
-    //initial sample data
-    {
-      id: 1,
-      firstname: "Sample First Name",
-      lastname: "Sample Last Name",
-      address: "Sample Address No 223 Sriyani Bellahtudaw, Bandaragama",
-      contact: "+94777744774",
-      dateofbirth: "1984-07-26",
-      email: "test@test.com",
-      image: "sample/image/url.png",
-    },
-    {
-      id: 2,
-      firstname: "Sample First Name 01",
-      lastname: "Sample Last Name 01",
-      address: "Sample Address No 223 Sriyani Bellahtudaw, Bandaragama 01",
-      contact: "+94777744774",
-      dateofbirth: "1984-07-26",
-      email: "test@test.com",
-      image: "sample/image/url.png",
-    },
-  ]);
+  const [users, setUsers] = useState([]);
+
+  useEffect(() => {
+    const getUsers = async () => {
+      const usersFromServer = await fetchUsers();
+      setUsers(usersFromServer);
+    };
+    getUsers();
+  }, []);
+
+  // Fetch Users
+  const fetchUsers = async () => {
+    const res = await fetch("http://localhost:3000/users");
+    const data = await res.json();
+    return data;
+  };
 
   //Create User Profile
   const createUserProfile = (
@@ -59,7 +52,9 @@ const UserContextProvider = (props) => {
   };
 
   //Delete User Profile
-  const deleteUserProfile = (id) => {};
+  const deleteUserProfile = (id) => {
+    setUsers(users.filter((user) => user.id !== id));
+  };
 
   return (
     <UserContext.Provider

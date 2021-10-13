@@ -11,7 +11,7 @@ function ImageHelpers({ src }) {
 
   return (
     <>
-      <Image src={ImgUrl()} roundedCircle />
+      <Image src={ImgUrl()} roundedCircle height="45px" />
     </>
   );
 }
