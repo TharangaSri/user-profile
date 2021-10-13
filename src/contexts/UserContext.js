@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { createContext, useState } from "react";
 
 export const UserContext = createContext();
 
 const UserContextProvider = (props) => {
   const [users, setUsers] = useState([
+    //initial sample data
     {
       id: 1,
       firstname: "Sample First Name",
@@ -25,4 +26,30 @@ const UserContextProvider = (props) => {
       image: "sample/image/url.png",
     },
   ]);
+
+  //Create User Profile
+  const createUserProfile = (
+    firstname,
+    lastname,
+    address,
+    contact,
+    dateofbirth,
+    email,
+    image
+  ) => {};
+
+  //Edit User Profile
+  const editUserProfile = (id, editUserProfile) => {};
+
+  //Delete User Profile
+  const deleteUserProfile = (id) => {};
+
+  return (
+    <UserContext.Provider
+      value={{ users, createUserProfile, editUserProfile, deleteUserProfile }}
+    >
+      {props.children}
+    </UserContext.Provider>
+  );
 };
+export default UserContextProvider;

@@ -1,5 +1,6 @@
 import "./index.css";
 import UserList from "./components/UserList";
+import UserContextProvider from "./contexts/UserContext";
 
 function App() {
   return (
@@ -7,7 +8,9 @@ function App() {
       <div className="container-xl">
         <div className="table-responsive">
           <div className="table-wrapper">
-            <UserList />
+            <UserContextProvider>
+              <UserList />
+            </UserContextProvider>
           </div>
         </div>
       </div>
