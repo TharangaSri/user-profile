@@ -54,7 +54,9 @@ const UserContextProvider = (props) => {
   };
 
   //Edit User Profile
-  const editUserProfile = (id, editUserProfile) => {};
+  const editUserProfile = (id, editUserProfile) => {
+    setUsers(users.map((user) => (user.id === id ? editUserProfile : user)));
+  };
 
   //Delete User Profile
   const deleteUserProfile = (id) => {};

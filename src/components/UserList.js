@@ -1,6 +1,7 @@
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import { Modal, Button } from "react-bootstrap";
 import { UserContext } from "../contexts/UserContext";
+import CreateFormModelWindowHelper from "../utils/CreateFormModelWindowHelper";
 import CreateUserForm from "./forms/CreateUserForm";
 import User from "./User";
 
@@ -10,7 +11,15 @@ function UserList() {
   //Add From - Show/Hide state of model window
   const [show, setShow] = useState(false);
   const handleShow = () => setShow(true);
+  const handleClose = () => setShow(false);
 
+  //Close Model Window After Submit
+  useEffect(() => {
+    handleClose();
+    return () => {
+      //
+    };
+  }, [users]);
   return (
     <>
       <div className="table-title">
@@ -53,17 +62,11 @@ function UserList() {
           ))}
         </tbody>
       </table>
-      <Modal show={show}>
-        <Modal.Header>
-          <Modal.Title>Create User Profile</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <CreateUserForm />
-        </Modal.Body>
-        <Modal.Footer>
-          <Button>Close Button</Button>
-        </Modal.Footer>
-      </Modal>
+      <CreateFormModelWindowHelper
+        show={show}
+        handleClose={handleClose}
+        title="Create User Profile"
+      />
     </>
   );
 }

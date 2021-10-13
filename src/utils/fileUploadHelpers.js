@@ -41,7 +41,7 @@ function FileUploadHelpers({ setUser, newUser }) {
 
   return (
     <>
-      <div className="row mt-5 justify-content-center">
+      <div className="row  justify-content-center">
         <div className="col-xl-8 col-lg-4 col-md-4 col-sm-12 ">
           {state.uploadImage ? (
             <Card.Img
