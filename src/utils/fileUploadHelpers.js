@@ -10,7 +10,7 @@ function FileUploadHelpers({ setUser, newUser }) {
   });
 
   //On file upload change
-  const handle = (e) => {
+  const handleImgOnChange = (e) => {
     handleImageUpload(e);
     const imageFile = e.target.files[0];
     setState({
@@ -61,7 +61,7 @@ function FileUploadHelpers({ setUser, newUser }) {
               type="file"
               accept="image/*"
               className="mt-2 btn btn-light w-75"
-              onChange={(e) => handle(e)}
+              onChange={(e) => handleImgOnChange(e)}
             />
           </div>
         </div>

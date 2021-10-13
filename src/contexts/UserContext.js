@@ -1,5 +1,6 @@
 import { createContext, useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
+import axios from "axios";
 
 export const UserContext = createContext();
 
@@ -14,46 +15,58 @@ const UserContextProvider = (props) => {
     getUsers();
   }, []);
 
-  // Fetch Users
+  //Load user profile list
   const fetchUsers = async () => {
-    const res = await fetch("http://localhost:3000/users");
-    const data = await res.json();
-    return data;
+    try {
+      let response = await axios({
+        method: "get",
+        url: `http://localhost:3000/users/`,
+        json: true,
+      });
+      return await response.data;
+      // return response;
+    } catch (err) {
+      console.error(err);
+    }
   };
 
-  //Create User Profile
-  const createUserProfile = (
-    firstname,
-    lastname,
-    address,
-    contact,
-    dateofbirth,
-    email,
-    image
-  ) => {
-    setUsers([
-      ...users,
-      {
-        id: uuidv4(),
-        firstname,
-        lastname,
-        address,
-        contact,
-        dateofbirth,
-        email,
-        image,
-      },
-    ]);
+  //Create user profile
+  const createUserProfile = async (user) => {
+    try {
+      let res = await axios({
+        method: "post",
+        headers: {
+          "Content-type": "application/json",
+        },
+        url: `http://localhost:3000/users/`,
+        json: true,
+        data: JSON.stringify(user),
+      });
+      const data = res;
+      setUsers([...users, data]);
+      // return response;
+    } catch (err) {
+      console.error(err);
+    }
   };
 
-  //Edit User Profile
+  //Edit user profile
   const editUserProfile = (id, editUserProfile) => {
     setUsers(users.map((user) => (user.id === id ? editUserProfile : user)));
   };
 
-  //Delete User Profile
-  const deleteUserProfile = (id) => {
-    setUsers(users.filter((user) => user.id !== id));
+  //Delete Profile
+  const deleteUserProfile = async (id) => {
+    try {
+      await axios({
+        method: "delete",
+        url: `http://localhost:3000/users/${id}`,
+        json: true,
+      });
+      setUsers(users.filter((user) => user.id !== id));
+    } catch (err) {
+      console.error(err);
+    }
   };
 
   return (

@@ -37,15 +37,7 @@ function CreateUserForm() {
   //On Form Submit
   const handleSubmit = (e) => {
     e.preventDefault();
-    createUserProfile(
-      firstname,
-      lastname,
-      address,
-      contact,
-      dateofbirth,
-      email,
-      image
-    );
+    createUserProfile(newUser);
   };
 
   return (
