@@ -3,6 +3,7 @@ import { useContext, useState } from "react";
 import { Form, Button } from "react-bootstrap";
 import "react-phone-number-input/style.css";
 import PhoneInput from "../../utils/PhoneInputHelper";
+import FileUploadHelpers from "../../utils/FileUploadHelpers";
 
 function CreateUserForm() {
   //Create User Function
@@ -45,9 +46,11 @@ function CreateUserForm() {
       image
     );
   };
+
   return (
     <Form onSubmit={handleSubmit}>
       <Form.Group>
+        <FileUploadHelpers setUser={setUser} newUser={newUser} />
         <Form.Control
           type="text"
           placeholder="First Name *"
@@ -89,17 +92,12 @@ function CreateUserForm() {
           value={email}
           onChange={(e) => onInputChange(e)}
         ></Form.Control>
-        <Form.Control
-          type="file"
-          placeholder="Profile Image"
-          name="image"
-          value={image}
-          onChange={(e) => onInputChange(e)}
-        ></Form.Control>
       </Form.Group>
-      <Button variant="success" type="submit" className="btn btn-success">
-        Create New User Profile
-      </Button>
+      <div className="row">
+        <Button variant="success" type="submit" className="btn btn-success">
+          Create New User Profile
+        </Button>
+      </div>
     </Form>
   );
 }
