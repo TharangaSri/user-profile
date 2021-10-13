@@ -3,16 +3,14 @@ import User from "./User";
 function UserList() {
   return (
     <>
-      <div className="table-responsive">
-        <div className="table-wrapper">
-          <div className="table-title">
-            <div className="row">
-              <div className="col-sm-6">
-                <h2>user list</h2>
-              </div>
-              <div className="col-sm-6"></div>
-            </div>
+      <div className="table-title">
+        <div className="row">
+          <div className="col-sm-6">
+            <h2>
+              <b>Fusiongrove</b> <i>Profile Manager</i>
+            </h2>
           </div>
+          <div className="col-sm-6"></div>
         </div>
       </div>
       <table className="table table-striped table-hover">

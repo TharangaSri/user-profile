@@ -3,8 +3,14 @@ import UserList from "./components/UserList";
 
 function App() {
   return (
-    <div className="container-xl">
-      <UserList />
+    <div className="App">
+      <div className="container-xl">
+        <div className="table-responsive">
+          <div className="table-wrapper">
+            <UserList />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

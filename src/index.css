@@ -1,0 +1,33 @@
+body {
+	color: #566787;
+	background: #f5f5f5;
+	font-family: 'Varela Round', sans-serif;
+	font-size: 13px;
+}
+
+.btn-act {
+	padding: 4px;
+}
+.table-responsive {
+    margin: 30px 0;
+}
+.table-wrapper {
+	background: #fff;
+	padding: 20px 25px;
+	border-radius: 3px;
+	min-width: 1000px;
+	box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+.table-title {        
+	padding-bottom: 15px;
+	background: #57a115;
+	color: #fff;
+	padding: 16px 30px;
+	min-width: 100%;
+	margin: -20px -25px 10px;
+	border-radius: 3px 3px 0 0;
+}
+.table-title h2 {
+	margin: 5px 0 0;
+	font-size: 24px;
+}
