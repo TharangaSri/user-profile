@@ -1,12 +1,22 @@
 import { useContext, useState, useEffect } from "react";
-import { Modal, Button } from "react-bootstrap";
+import { Alert, Button } from "react-bootstrap";
 import { UserContext } from "../contexts/UserContext";
 import CreateFormModelWindowHelper from "../utils/CreateFormModelWindowHelper";
-import CreateUserForm from "./forms/CreateUserForm";
 import User from "./User";
 
 function UserList() {
   const { users } = useContext(UserContext);
+
+  //Alert State
+  const [showAlert, setShowAlert] = useState(false);
+
+  //Alert Auto Close
+  const handleShowAlert = () => {
+    setShowAlert(true);
+    setTimeout(() => {
+      setShowAlert(false);
+    }, 2000);
+  };
 
   //Add From - Show/Hide state of model window
   const [show, setShow] = useState(false);
@@ -17,7 +27,7 @@ function UserList() {
   useEffect(() => {
     handleClose();
     return () => {
-      //
+      handleShowAlert();
     };
   }, [users]);
   return (
@@ -41,6 +51,14 @@ function UserList() {
           </div>
         </div>
       </div>
+      <Alert
+        variant="success"
+        show={showAlert}
+        onClose={() => setShowAlert(false)}
+        dismissible
+      >
+        User Profile List Updated Successfully!
+      </Alert>
       <table className="table table-striped table-hover">
         <thead>
           <tr>
