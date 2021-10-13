@@ -1,10 +1,16 @@
-import Button from "@restart/ui/esm/Button";
-import { useContext } from "react";
+import { useContext, useState } from "react";
+import { Modal, Button } from "react-bootstrap";
 import { UserContext } from "../contexts/UserContext";
+import CreateUserForm from "./CreateUserForm";
 import User from "./User";
 
 function UserList() {
   const { users } = useContext(UserContext);
+
+  //Add From - Show/Hide state of model window
+  const [show, setShow] = useState(false);
+  const handleShow = () => setShow(true);
+
   return (
     <>
       <div className="table-title">
@@ -15,8 +21,13 @@ function UserList() {
             </h2>
           </div>
           <div className="col-sm-5 col-lg-3">
-            <Button className="btn btn-warning">
-              <b>Create New User Profile</b>
+            <Button className="btn btn-warning " onClick={handleShow}>
+              <span>
+                <b>
+                  Create New User Profile
+                  <i className="material-icons ">&#xE147;</i>
+                </b>
+              </span>
             </Button>
           </div>
         </div>
@@ -42,6 +53,17 @@ function UserList() {
           ))}
         </tbody>
       </table>
+      <Modal show={show}>
+        <Modal.Header>
+          <Modal.Title>Add Employee</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <CreateUserForm />
+        </Modal.Body>
+        <Modal.Footer>
+          <Button>Close Button</Button>
+        </Modal.Footer>
+      </Modal>
     </>
   );
 }
