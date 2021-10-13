@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { Modal, Button } from "react-bootstrap";
 import { UserContext } from "../contexts/UserContext";
-import CreateUserForm from "./CreateUserForm";
+import CreateUserForm from "./forms/CreateUserForm";
 import User from "./User";
 
 function UserList() {
@@ -55,7 +55,7 @@ function UserList() {
       </table>
       <Modal show={show}>
         <Modal.Header>
-          <Modal.Title>Add Employee</Modal.Title>
+          <Modal.Title>Create User Profile</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <CreateUserForm />

@@ -66,3 +66,17 @@ body {
 .modal form label {
 	font-weight: normal;
 }	
+
+.modal-header{
+  background-color: #c0c2bf;
+  color: #000000;
+  font-weight: bold;
+}
+
+.modal-body form input{
+  margin-top:8px;
+}
+
+.modal-body form button{
+  margin-top:15px;
+}

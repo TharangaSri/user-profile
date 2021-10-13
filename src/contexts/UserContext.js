@@ -1,4 +1,5 @@
 import { createContext, useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 
 export const UserContext = createContext();
 
@@ -36,7 +37,21 @@ const UserContextProvider = (props) => {
     dateofbirth,
     email,
     image
-  ) => {};
+  ) => {
+    setUsers([
+      ...users,
+      {
+        id: uuidv4(),
+        firstname,
+        lastname,
+        address,
+        contact,
+        dateofbirth,
+        email,
+        image,
+      },
+    ]);
+  };
 
   //Edit User Profile
   const editUserProfile = (id, editUserProfile) => {};
