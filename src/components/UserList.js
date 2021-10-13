@@ -1,6 +1,9 @@
+import { useContext } from "react";
+import { UserContext } from "../contexts/UserContext";
 import User from "./User";
 
 function UserList() {
+  const { users } = useContext(UserContext);
   return (
     <>
       <div className="table-title">
@@ -26,7 +29,11 @@ function UserList() {
           </tr>
         </thead>
         <tbody>
-          <User />
+          {users.map((user) => (
+            <tr key={user.id}>
+              <User user={user} />
+            </tr>
+          ))}
         </tbody>
       </table>
     </>
