@@ -7,7 +7,15 @@ function User({ user }) {
       <td>{user.contact}</td>
       <td>{user.dateofbirth}</td>
       <td>{user.email}</td>
-      <td>{user.image}</td>
+      <td>
+        <img src={user.image} width="75px" height="75" />
+      </td>
+      <td>
+        <button>Edit</button>
+      </td>
+      <td>
+        <button>Delete</button>
+      </td>
     </>
   );
 }

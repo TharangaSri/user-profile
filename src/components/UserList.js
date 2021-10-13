@@ -26,6 +26,7 @@ function UserList() {
             <th>Date Of Birth</th>
             <th>Email</th>
             <th>Image</th>
+            <th>Action</th>
           </tr>
         </thead>
         <tbody>
