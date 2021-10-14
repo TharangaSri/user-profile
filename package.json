@@ -2,7 +2,7 @@
   "name": "user-profile",
   "version": "0.1.0",
   "engines": {
-    "node": "6.x"
+    "node": "8.x"
   },
   "private": true,
   "dependencies": {
