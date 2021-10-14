@@ -84,7 +84,7 @@ function UserList() {
           </tr>
         </thead>
         <tbody>
-          {users.map((user) => (
+          {currentUsers.map((user) => (
             <tr key={user.id}>
               <User user={user} />
             </tr>
