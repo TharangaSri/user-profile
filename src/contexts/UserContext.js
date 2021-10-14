@@ -19,7 +19,7 @@ const UserContextProvider = (props) => {
     try {
       let response = await axios({
         method: "get",
-        url: `/users/`,
+        url: `http://localhost:3000/users/`,
         json: true,
       });
       return await response.data;
