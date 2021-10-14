@@ -3,7 +3,7 @@ import { useContext, useState } from "react";
 import { Form, Button } from "react-bootstrap";
 import "react-phone-number-input/style.css";
 import PhoneInput from "../../utils/PhoneInputHelper";
-import FileUploadHelpers from "../../utils/ImageUploadHelpers";
+import FileUploadHelpers from "../../utils/ImageUploadEditHelpers";
 
 function EditUserForm({ theUser }) {
   const id = theUser.id;
@@ -17,7 +17,8 @@ function EditUserForm({ theUser }) {
 
   //Set Contact Statue
   const handleOnChangePhoneInput = (value) => {
-    // setUser({ ...newUser, contact: value });
+    console.log(value);
+    setContact(value);
   };
 
   //Edit User Function
@@ -42,7 +43,7 @@ function EditUserForm({ theUser }) {
     <>
       <Form onSubmit={handleSubmit}>
         <Form.Group>
-          <FileUploadHelpers setUser={setContact} newUser={setImage} />
+          <FileUploadHelpers setImage={setImage} />
           <Form.Control
             type="text"
             placeholder="First Name *"

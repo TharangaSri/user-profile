@@ -2,7 +2,7 @@ import { useState } from "react";
 import imageCompression from "browser-image-compression";
 import Card from "react-bootstrap/Card";
 
-function FileUploadHelpers({ setUser, newUser }) {
+function ImageUploadCreateHelpers({ setImage, newUser }) {
   //File Upload Helper State
   const [state, setState] = useState({
     originalLink: "",
@@ -33,7 +33,7 @@ function FileUploadHelpers({ setUser, newUser }) {
     imageCompression(imageFile, options)
       .then(function (compressedFile) {
         console.log(compressedFile);
-        setUser({ ...newUser, image: compressedFile });
+        setImage({ ...newUser, image: compressedFile });
       })
       .catch(function (error) {
         console.log(error.message);
@@ -59,6 +59,7 @@ function FileUploadHelpers({ setUser, newUser }) {
           )}
           <div className="d-flex justify-content-center ">
             <input
+              name="image"
               type="file"
               accept="image/*"
               className="mt-2 btn btn-light w-75"
@@ -71,4 +72,4 @@ function FileUploadHelpers({ setUser, newUser }) {
   );
 }
 
-export default FileUploadHelpers;
+export default ImageUploadCreateHelpers;

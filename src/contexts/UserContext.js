@@ -51,8 +51,22 @@ const UserContextProvider = (props) => {
   };
 
   //Edit user profile
-  const editUserProfile = (id, editUserProfile) => {
-    setUsers(users.map((user) => (user.id === id ? editUserProfile : user)));
+  const editUserProfile = async (id, editedUserProfile) => {
+    try {
+      let res = await axios({
+        method: "put",
+        headers: {
+          "Content-type": "application/json",
+        },
+        url: `/users/${id}`,
+        json: true,
+        data: JSON.stringify(editedUserProfile),
+      });
+      setUsers(users.map((user) => (user.id === id ? editedUserProfile : user)));
+      // return response;
+    } catch (err) {
+      console.error(err);
+    }
   };
 
   //Delete Profile
@@ -76,5 +90,5 @@ const UserContextProvider = (props) => {
       {props.children}
     </UserContext.Provider>
   );
-};
+};;
 export default UserContextProvider;
