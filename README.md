@@ -7,7 +7,9 @@ This is basic react-js example for manage user, with this project you can do fol
  2. Edit User 
  3. Delete User 
  4. List User Profiles
+ 
 
+## You can view demo - https://create-react-profile.herokuapp.com/
 
 **User Profile List**
 ![enter image description here](https://raw.githubusercontent.com/TharangaSri/user-profile/development/doc-img/img1.PNG)
@@ -35,9 +37,3 @@ Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
-
-
-
-
-
-
