@@ -1,90 +1,67 @@
 {
   "users": [
     {
-      "firstname": "sdfsdf",
-      "lastname": "sdfsd",
-      "address": "dfsd",
-      "contact": "+33333",
-      "dateofbirth": "2021-10-22",
-      "email": "martinblank@mail.com4",
+      "id": 1,
+      "firstname": "Denawakage",
+      "lastname": "Jayasinghe",
+      "address": "No 232 Sriyani Bellanthudawa,",
+      "contact": "+0771198563",
+      "dateofbirth": "2021-10-07",
+      "email": "ddtharangasri@gmail.com",
+      "image": {
+        "name": "131612313_10158969849872300_990759718758038190_n.jpg",
+        "lastModified": 1633520369032
+      }
+    },
+    {
+      "firstname": "Denawakage",
+      "lastname": "Jayasinghe",
+      "address": "No 232 Sriyani Bellanthudawa,",
+      "contact": "+0771198563",
+      "dateofbirth": "2021-10-14",
+      "email": "admin@daiki.com",
       "image": "",
       "id": 2
     },
     {
-      "firstname": "sgfgd",
-      "lastname": "fgdfg",
-      "address": "dfgdf",
-      "contact": "+44444444",
-      "dateofbirth": "2021-10-22",
-      "email": "martinblank@mail.com1",
+      "firstname": "Denawakage",
+      "lastname": "Jayasinghe",
+      "address": "No 232 Sriyani Bellanthudawa,",
+      "contact": "+0771198563",
+      "dateofbirth": "2021-10-14",
+      "email": "admin@daiki.com",
       "image": "",
       "id": 3
     },
     {
-      "firstname": "sdfsdf",
-      "lastname": "sdfds",
+      "firstname": "Tharanga Sri",
+      "lastname": "ja",
       "address": "dsfsd",
-      "contact": "+33333",
-      "dateofbirth": "2021-10-15",
-      "email": "admin@daiki.com",
+      "contact": "+333333",
+      "dateofbirth": "2021-10-08",
+      "email": "ddtharangasri@gmail.com",
       "image": "",
       "id": 4
     },
     {
-      "firstname": "ttttttttttt",
-      "lastname": "tttttttttttt",
-      "address": "tttttttttt",
-      "contact": "+3333333333333",
-      "dateofbirth": "2021-10-01",
-      "email": "daiki@daiki.com",
-      "image": "",
-      "id": 5
+      "id": 5,
+      "firstname": "Sri",
+      "lastname": "asd",
+      "address": "sdfsd",
+      "contact": "+222",
+      "dateofbirth": "2021-10-07",
+      "email": "ddtharangasri@gmail.com",
+      "image": ""
     },
     {
-      "firstname": "sdfsdf",
-      "lastname": "sdfds",
+      "id": 6,
+      "firstname": "5555",
+      "lastname": "55555555555555",
       "address": "dsfsd",
-      "contact": "+333",
+      "contact": "+333333",
       "dateofbirth": "2021-10-14",
-      "email": "admin@daiki.com",
-      "image": {
-        "name": "interview-1.PNG",
-        "lastModified": 1634013892495
-      },
-      "id": 6
-    },
-    {
-      "firstname": "dsfsd",
-      "lastname": "dsf",
-      "address": "sdfsd",
-      "contact": "+333",
-      "dateofbirth": "2021-10-14",
-      "email": "daiki@daiki.com",
-      "image": "",
-      "id": 7
-    },
-    {
-      "firstname": "sdfsdf",
-      "lastname": "sdfds",
-      "address": "sdfsd",
-      "contact": "+333",
-      "dateofbirth": "2021-10-14",
-      "email": "martinblank@mail.com1",
-      "image": {
-        "name": "131612313_10158969849872300_990759718758038190_n.jpg",
-        "lastModified": 1633520369032
-      },
-      "id": 8
-    },
-    {
-      "firstname": "dsfsd",
-      "lastname": "sdfds",
-      "address": "sdfsd",
-      "contact": "",
-      "dateofbirth": "",
-      "email": "daiki@daiki.com",
-      "image": "",
-      "id": 9
+      "email": "ddtharangasri@gmail.com",
+      "image": ""
     }
   ]
 }

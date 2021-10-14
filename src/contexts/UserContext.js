@@ -1,5 +1,4 @@
 import { createContext, useState, useEffect } from "react";
-import { v4 as uuidv4 } from "uuid";
 import axios from "axios";
 
 export const UserContext = createContext();
@@ -20,7 +19,7 @@ const UserContextProvider = (props) => {
     try {
       let response = await axios({
         method: "get",
-        url: `http://localhost:3000/users/`,
+        url: `/users/`,
         json: true,
       });
       return await response.data;
@@ -39,7 +38,7 @@ const UserContextProvider = (props) => {
           "Content-type": "application/json",
           //"Content-Type": "multipart/form-data",
         },
-        url: `http://localhost:3000/users/`,
+        url: `/users/`,
         json: true,
         data: JSON.stringify(user),
       });
@@ -52,8 +51,22 @@ const UserContextProvider = (props) => {
   };
 
   //Edit user profile
-  const editUserProfile = (id, editUserProfile) => {
-    setUsers(users.map((user) => (user.id === id ? editUserProfile : user)));
+  const editUserProfile = async (id, editedUserProfile) => {
+    try {
+      let res = await axios({
+        method: "put",
+        headers: {
+          "Content-type": "application/json",
+        },
+        url: `/users/${id}`,
+        json: true,
+        data: JSON.stringify(editedUserProfile),
+      });
+      setUsers(users.map((user) => (user.id === id ? editedUserProfile : user)));
+      // return response;
+    } catch (err) {
+      console.error(err);
+    }
   };
 
   //Delete Profile
@@ -61,7 +74,7 @@ const UserContextProvider = (props) => {
     try {
       await axios({
         method: "delete",
-        url: `http://localhost:3000/users/${id}`,
+        url: `/users/${id}`,
         json: true,
       });
       setUsers(users.filter((user) => user.id !== id));
@@ -77,5 +90,5 @@ const UserContextProvider = (props) => {
       {props.children}
     </UserContext.Provider>
   );
-};
+};;
 export default UserContextProvider;
