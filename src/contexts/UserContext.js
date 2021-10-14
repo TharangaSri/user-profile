@@ -37,12 +37,13 @@ const UserContextProvider = (props) => {
         method: "post",
         headers: {
           "Content-type": "application/json",
+          //"Content-Type": "multipart/form-data",
         },
         url: `http://localhost:3000/users/`,
         json: true,
         data: JSON.stringify(user),
       });
-      const data = res;
+      const data = await res.data;
       setUsers([...users, data]);
       // return response;
     } catch (err) {
