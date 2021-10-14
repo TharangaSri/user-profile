@@ -2,6 +2,7 @@ import { useContext, useState, useEffect } from "react";
 import { Alert, Button } from "react-bootstrap";
 import { UserContext } from "../contexts/UserContext";
 import CreateFormModelWindowHelper from "../utils/CreateFormModelWindowHelper";
+import Pagination from "../utils/PaginationHelper";
 import User from "./User";
 
 function UserList() {
@@ -30,6 +31,16 @@ function UserList() {
       handleShowAlert();
     };
   }, [users]);
+
+  //Pagination
+  const [currentPage, setCurrentPage] = useState(1);
+  const [usersPerPage] = useState(6);
+
+  const indexOfLastUsers = currentPage * usersPerPage;
+  const indexOfFirstUsers = indexOfLastUsers - usersPerPage;
+  const currentUsers = users.slice(indexOfFirstUsers, indexOfLastUsers);
+  const totalPagesNum = Math.ceil(users.length / usersPerPage);
+
   return (
     <>
       <div className="table-title">
@@ -73,13 +84,21 @@ function UserList() {
           </tr>
         </thead>
         <tbody>
-          {users.map((user) => (
+          {currentUsers.map((user) => (
             <tr key={user.id}>
               <User user={user} />
             </tr>
           ))}
         </tbody>
       </table>
+
+      <Pagination
+        pages={totalPagesNum}
+        setCurrentPage={setCurrentPage}
+        currentUsers={currentUsers}
+        users={users}
+      />
+
       <CreateFormModelWindowHelper
         show={show}
         handleClose={handleClose}
