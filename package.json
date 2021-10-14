@@ -1,6 +1,5 @@
 {
   "name": "user-profile",
-
   "version": "0.1.0",
   "engines": {
     "node": "14.17.6",
