@@ -1,0 +1,74 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstname": "Sample First Name",
+      "lastname": "Sample Last Name",
+      "address": "Sample Address No 223 Sriyani Bellahtudaw, Bandaragama",
+      "contact": "+94777744774",
+      "dateofbirth": "1984-07-26",
+      "email": "test@test.com",
+      "image": "./profile_image.jpg1"
+    },
+    {
+      "id": 2,
+      "firstname": "Sample First Name 01",
+      "lastname": "Sample Last Name 01",
+      "address": "Sample Address No 223 Sriyani Bellahtudaw, Bandaragama 01",
+      "contact": "+94777744774",
+      "dateofbirth": "1984-07-26",
+      "email": "test@test.com",
+      "image": "./profile_image.jpg1"
+    },
+    {
+      "firstname": "Denawakage",
+      "lastname": "Jayasinghe",
+      "address": "No 232 Sriyani Bellanthudawa,",
+      "contact": "+0771198563",
+      "dateofbirth": "2021-10-06",
+      "email": "billie@billie.com",
+      "image": "",
+      "id": 3
+    },
+    {
+      "firstname": "Denawakage",
+      "lastname": "Jayasinghe",
+      "address": "No 232 Sriyani Bellanthudawa,",
+      "contact": "+0771198563",
+      "dateofbirth": "",
+      "email": "ddtharangasri@gmail.com",
+      "image": "",
+      "id": 4
+    },
+    {
+      "firstname": "Denawakage",
+      "lastname": "Jayasinghe",
+      "address": "No 232 Sriyani Bellanthudawa,",
+      "contact": "+0771198563",
+      "dateofbirth": "2021-10-13",
+      "email": "daiki@daiki.com",
+      "image": "",
+      "id": 5
+    },
+    {
+      "firstname": "Denawakage",
+      "lastname": "Jayasinghe",
+      "address": "No 232 Sriyani Bellanthudawa,",
+      "contact": "+0771198563",
+      "dateofbirth": "2021-10-20",
+      "email": "daiki@daiki.com",
+      "image": "",
+      "id": 6
+    },
+    {
+      "firstname": "Denawakage",
+      "lastname": "Jayasinghe",
+      "address": "No 232 Sriyani Bellanthudawa,",
+      "contact": "+0771198563",
+      "dateofbirth": "2021-10-22",
+      "email": "daiki@daiki.com",
+      "image": "",
+      "id": 7
+    }
+  ]
+}
