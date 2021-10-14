@@ -1,5 +1,4 @@
 import { createContext, useState, useEffect } from "react";
-import { v4 as uuidv4 } from "uuid";
 import axios from "axios";
 
 export const UserContext = createContext();
@@ -20,7 +19,7 @@ const UserContextProvider = (props) => {
     try {
       let response = await axios({
         method: "get",
-        url: `http://localhost:3000/users/`,
+        url: `/users/`,
         json: true,
       });
       return await response.data;
@@ -39,7 +38,7 @@ const UserContextProvider = (props) => {
           "Content-type": "application/json",
           //"Content-Type": "multipart/form-data",
         },
-        url: `http://localhost:3000/users/`,
+        url: `/users/`,
         json: true,
         data: JSON.stringify(user),
       });
@@ -61,7 +60,7 @@ const UserContextProvider = (props) => {
     try {
       await axios({
         method: "delete",
-        url: `http://localhost:3000/users/${id}`,
+        url: `/users/${id}`,
         json: true,
       });
       setUsers(users.filter((user) => user.id !== id));
