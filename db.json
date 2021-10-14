@@ -1,14 +1,74 @@
 {
   "users": [
     {
-      "firstname": "Tharanga Sri",
-      "lastname": "j",
-      "address": "test",
-      "contact": "+33333",
+      "id": 1,
+      "firstname": "Denawakage",
+      "lastname": "Jayasinghe",
+      "address": "No 232 Sriyani Bellanthudawa,",
+      "contact": "+33771198563",
       "dateofbirth": "2021-10-07",
       "email": "ddtharangasri@gmail.com",
+      "image": ""
+    },
+    {
+      "firstname": "Saman ",
+      "lastname": "Kumara",
+      "address": "Test Address No 88 Test",
+      "contact": "+333333",
+      "dateofbirth": "2021-10-14",
+      "email": "ddtharangasri@gmail.com",
       "image": "",
-      "id": 1
+      "id": 2
+    },
+    {
+      "firstname": "Denawakage",
+      "lastname": "Jayasinghe",
+      "address": "No 232 Sriyani Bellanthudawa,",
+      "contact": "+0771198563",
+      "dateofbirth": "2021-10-07",
+      "email": "admin@daiki.com",
+      "image": "",
+      "id": 3
+    },
+    {
+      "firstname": "New Test Name",
+      "lastname": "New Test Last Name",
+      "address": "New Test Address Like No55 Mawanella Road ",
+      "contact": "+94771198563",
+      "dateofbirth": "2021-09-30",
+      "email": "ddtharangasri@gmail.com",
+      "image": "",
+      "id": 4
+    },
+    {
+      "firstname": "Denawakage",
+      "lastname": "Jayasinghe",
+      "address": "No 232 Sriyani Bellanthudawa,",
+      "contact": "+0771198563",
+      "dateofbirth": "2021-09-30",
+      "email": "admin@daiki.com",
+      "image": "",
+      "id": 5
+    },
+    {
+      "firstname": "Gayans",
+      "lastname": "Sri Jayasingh",
+      "address": "No 232 Sriyani Bellanthudawa,",
+      "contact": "+0771198563",
+      "dateofbirth": "2021-10-06",
+      "email": "ddtharangasri@gmail.com",
+      "image": "",
+      "id": 6
+    },
+    {
+      "firstname": "Bandara ",
+      "lastname": "Gamagey",
+      "address": "No 88 Pahalabiyanwala Kadawatha",
+      "contact": "+94771198563",
+      "dateofbirth": "2021-09-28",
+      "email": "ddtharangasri@gmail.com",
+      "image": "",
+      "id": 7
     }
   ]
 }
