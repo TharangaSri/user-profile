@@ -3,7 +3,7 @@ import { useContext, useState } from "react";
 import { Form, Button } from "react-bootstrap";
 import "react-phone-number-input/style.css";
 import PhoneInput from "../../utils/PhoneInputHelper";
-import FileUploadHelpers from "../../utils/FileUploadHelpers";
+import FileUploadHelpers from "../../utils/ImageUploadHelpers";
 
 function EditUserForm({ theUser }) {
   const id = theUser.id;
