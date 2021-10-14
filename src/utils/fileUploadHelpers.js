@@ -32,6 +32,7 @@ function FileUploadHelpers({ setUser, newUser }) {
     //start compression
     imageCompression(imageFile, options)
       .then(function (compressedFile) {
+        console.log(compressedFile);
         setUser({ ...newUser, image: compressedFile });
       })
       .catch(function (error) {
