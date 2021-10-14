@@ -2,7 +2,8 @@
   "name": "user-profile",
   "version": "0.1.0",
   "engines": {
-    "node": "14.x"
+    "node": "14.x",
+    "npm": "6.14.x"
   },
   "private": true,
   "dependencies": {
@@ -19,6 +20,7 @@
     "react-phone-input-2": "^2.14.0",
     "react-phone-number-input": "^3.1.34",
     "react-scripts": "4.0.3",
+    "typescript": "^4.4.4",
     "web-vitals": "^1.1.2"
   },
   "scripts": {
