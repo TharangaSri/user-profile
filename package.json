@@ -28,7 +28,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "json-server --watch db.json --prot 3000"
+    "server": "json-server --watch db.json --prot 5000"
   },
   "eslintConfig": {
     "extends": [

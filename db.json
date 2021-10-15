@@ -1,14 +1,3 @@
 {
-  "users": [
-    {
-      "firstname": "Tharanga Sri",
-      "lastname": "j",
-      "address": "test",
-      "contact": "+33333",
-      "dateofbirth": "2021-10-07",
-      "email": "ddtharangasri@gmail.com",
-      "image": "",
-      "id": 1
-    }
-  ]
+  "users": []
 }
