@@ -20,13 +20,14 @@ const UserContextProvider = (props) => {
       let response = await axios({
         method: "get",
         //can't setup proxy with json server, heroku return error
-        url: `http://localhost:3004/users/`,
+        url: `http://localhost:3003/users/`,
         json: true,
       });
       return await response.data;
       // return response;
     } catch (err) {
       console.error(err);
+      return []
     }
   };
 
