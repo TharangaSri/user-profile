@@ -27,6 +27,7 @@ const UserContextProvider = (props) => {
       // return response;
     } catch (err) {
       console.error(err);
+      return []
     }
   };
 
