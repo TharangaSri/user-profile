@@ -1,3 +1,14 @@
 {
-  "users": []
+  "users": [
+    {
+      "firstname": "Denawakage",
+      "lastname": "Jayasinghe",
+      "address": "No 232 Sriyani Bellanthudawa,",
+      "contact": "+0771198563",
+      "dateofbirth": "",
+      "email": "ddtharangasri@gmail.com",
+      "image": "",
+      "id": 1
+    }
+  ]
 }

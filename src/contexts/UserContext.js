@@ -20,7 +20,7 @@ const UserContextProvider = (props) => {
       let response = await axios({
         method: "get",
         //can't setup proxy with json server, heroku return error
-        url: `http://localhost:5000/users/`,
+        url: `http://localhost:3000/users/`,
         json: true,
       });
       return await response.data;
@@ -40,7 +40,7 @@ const UserContextProvider = (props) => {
           //"Content-Type": "multipart/form-data",
         },
         //can't setup proxy with json server, heroku return error
-        url: `http://localhost:5000/users/`,
+        url: `http://localhost:3000/users/`,
         json: true,
         data: JSON.stringify(user),
       });
@@ -61,7 +61,7 @@ const UserContextProvider = (props) => {
           "Content-type": "application/json",
         },
         //can't setup proxy with json server, heroku return error
-        url: `http://localhost:5000/users/${id}`,
+        url: `http://localhost:3000/users/${id}`,
         json: true,
         data: JSON.stringify(editedUserProfile),
       });
@@ -80,7 +80,7 @@ const UserContextProvider = (props) => {
       await axios({
         method: "delete",
         //can't setup proxy with json server, heroku return error
-        url: `http://localhost:5000/users/${id}`,
+        url: `http://localhost:3000/users/${id}`,
         json: true,
       });
       setUsers(users.filter((user) => user.id !== id));
