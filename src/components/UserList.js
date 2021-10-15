@@ -38,13 +38,10 @@ function UserList() {
 
   const indexOfLastUsers = currentPage * usersPerPage;
   const indexOfFirstUsers = indexOfLastUsers - usersPerPage;
-  // const currentUsers = users.slice(indexOfFirstUsers, indexOfLastUsers);
-  const currentUsers = [];
-  const totalPagesNum = [];
-  if (users && typeof users !== "undefined") {
-    const currentUsers = users.slice(indexOfFirstUsers, indexOfLastUsers);
-    const totalPagesNum = Math.ceil(users.length / usersPerPage);
-  }
+
+  const currentUsers = users.slice(indexOfFirstUsers, indexOfLastUsers);
+  const totalPagesNum = Math.ceil(users.length / usersPerPage);
+
 
   return (
     <>
