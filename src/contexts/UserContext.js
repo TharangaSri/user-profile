@@ -5,6 +5,7 @@ export const UserContext = createContext();
 
 const UserContextProvider = (props) => {
   const [users, setUsers] = useState([]);
+  const serverUrl = `https://json-server-user-profile.herokuapp.com`;
 
   useEffect(() => {
     const getUsers = async () => {
@@ -20,14 +21,14 @@ const UserContextProvider = (props) => {
       let response = await axios({
         method: "get",
         //can't setup proxy with json server, heroku return error
-        url: `http://localhost:3004/users/`,
+        url: `${serverUrl}/users/`,
         json: true,
       });
       return await response.data;
       // return response;
     } catch (err) {
       console.error(err);
-      return []
+      return [];
     }
   };
 
@@ -41,7 +42,7 @@ const UserContextProvider = (props) => {
           //"Content-Type": "multipart/form-data",
         },
         //can't setup proxy with json server, heroku return error
-        url: `http://localhost:3004/users/`,
+        url: `${serverUrl}/users/`,
         json: true,
         data: JSON.stringify(user),
       });
@@ -62,7 +63,7 @@ const UserContextProvider = (props) => {
           "Content-type": "application/json",
         },
         //can't setup proxy with json server, heroku return error
-        url: `http://localhost:3004/users/${id}`,
+        url: `${serverUrl}/users/${id}`,
         json: true,
         data: JSON.stringify(editedUserProfile),
       });
@@ -81,7 +82,7 @@ const UserContextProvider = (props) => {
       await axios({
         method: "delete",
         //can't setup proxy with json server, heroku return error
-        url: `http://localhost:3004/users/${id}`,
+        url: `${serverUrl}/users/${id}`,
         json: true,
       });
       setUsers(users.filter((user) => user.id !== id));
