@@ -15,10 +15,11 @@ const Pagination = ({ pages, setCurrentPage, currentUsers, users }) => {
 
   return (
     <div class="clearfix">
-      <div class="hint-text">
-        Showing <b>{currentUsers.length}</b> out of <b>{users.length}</b>{" "}
+      {/* <div class="hint-text">
+        Showing <b>{currentUsers?.length === 0 ? 0 : currentUsers.length}</b>{" "}
+        out of <b>{users && typeof users !== "undefined" ? 0 : users.length}</b>{" "}
         entries
-      </div>
+      </div> */}
       <nav aria-label="Page navigation ">
         <ul class="pagination  justify-content-end">
           <li class={currentButton === 1 ? "page-item disabled" : "page-item"}>
